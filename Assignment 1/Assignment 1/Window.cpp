@@ -6,18 +6,19 @@ Window::Window()
 }
 bool Window::create(char* windowName, char* windowTitle, int posX, int posY, int width, int height)
 {
-	ZeroMemory(&wc,sizeof(WNDCLASSEX));
+	ZeroMemory(&wc,sizeof(WNDCLASSEX)); //gets the memory ready for wc
 
 	wc.cbSize = sizeof(WNDCLASSEX);
-	wc.style = CS_HREDRAW|CS_VREDRAW;
-	wc.lpfnWndProc = proc;
-	wc.hInstance = GetModuleHandle(nullptr);
-	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
-	wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
-	wc.lpszClassName = windowName;
+	wc.style = CS_HREDRAW|CS_VREDRAW;//the window class style
+	wc.lpfnWndProc = proc; // our message proccesor
+	wc.hInstance = GetModuleHandle(nullptr); // gets the hinstance
+	wc.hCursor = LoadCursor(NULL, IDC_ARROW); // cursor information
+	wc.hbrBackground = (HBRUSH)COLOR_WINDOW; // background brush
+	wc.lpszClassName = windowName; // the window name
 
-	RegisterClassEx(&wc);
+	RegisterClassEx(&wc); // registers wc
 
+	//creates window
 	hwnd = CreateWindowEx(NULL,
 		windowName,
 		windowTitle,
@@ -29,8 +30,8 @@ bool Window::create(char* windowName, char* windowTitle, int posX, int posY, int
 		NULL,
 		NULL,
 		GetModuleHandle(nullptr),
-		NULL);
-	ShowWindow(hwnd, 1);
+		NULL); 
+	ShowWindow(hwnd, 1); // shows the window we want, 1 enables it
 	return true;
 }
 
@@ -59,4 +60,9 @@ LRESULT CALLBACK Window::proc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 		} break;
 	}
 	return DefWindowProc(hWnd, message, wParam, lParam);
+}
+
+int Window::getMsgPrm()
+{
+	return msg.wParam;
 }

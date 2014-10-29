@@ -3,10 +3,11 @@
 class Engine
 {
 private:
-	Graphics* graphics;
+	Graphics* graphics; // graphics pointer
+	int message; //only for shutdown
 public:
-	Engine();
-	bool Initialize();
-	void Run();
-	void Shutdown();
+	Engine(); //constructor
+	bool Initialize(); // for any initilizeations
+	void Run(); //starts the engine
+	int Shutdown(); //shuts down engine
 };
