@@ -15,7 +15,7 @@ private:
 	bool createWindow(); //to create the window
 public:
 	Graphics(); //constructor
-	void Initilize(); //initilizes graphics
+	void Initialize(); //initilizes graphics
 	void Run(); // goes into our loop
 	int Shutdown(); //the shutdown
 };

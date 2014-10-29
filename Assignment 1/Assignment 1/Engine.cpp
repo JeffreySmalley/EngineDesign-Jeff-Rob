@@ -8,13 +8,12 @@ Engine::Engine()
 bool Engine::Initialize()
 {
 	graphics = new Graphics();
-	graphics->Initilize();
+	graphics->Initialize();
 	return true;
 }
 
 int Engine::Shutdown()
 {
-
 	message = graphics->Shutdown();
 	delete graphics;
 	graphics = 0;

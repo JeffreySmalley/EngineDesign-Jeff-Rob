@@ -1,6 +1,5 @@
 #include "Window.h"
 
-
 Window::Window()
 {
 }
@@ -13,7 +12,7 @@ bool Window::create(char* windowName, char* windowTitle, int posX, int posY, int
 	wc.lpfnWndProc = proc; // our message proccesor
 	wc.hInstance = GetModuleHandle(nullptr); // gets the hinstance
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW); // cursor information
-	wc.hbrBackground = (HBRUSH)COLOR_WINDOW; // background brush
+	//wc.hbrBackground = (HBRUSH)COLOR_WINDOW; // background brush
 	wc.lpszClassName = windowName; // the window name
 
 	RegisterClassEx(&wc); // registers wc
@@ -22,9 +21,9 @@ bool Window::create(char* windowName, char* windowTitle, int posX, int posY, int
 	hwnd = CreateWindowEx(NULL,
 		windowName,
 		windowTitle,
-		WS_OVERLAPPEDWINDOW,
-		posX,
-		posY,
+		WS_EX_TOPMOST | WS_POPUP,
+		0,
+		0,
 		width,
 		height,
 		NULL,
