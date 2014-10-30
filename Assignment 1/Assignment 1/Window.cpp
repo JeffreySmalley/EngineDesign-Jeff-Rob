@@ -21,7 +21,7 @@ bool Window::create(char* windowName, char* windowTitle, int posX, int posY, int
 	hwnd = CreateWindowEx(NULL,
 		windowName,
 		windowTitle,
-		WS_EX_TOPMOST | WS_POPUP,
+		WS_OVERLAPPEDWINDOW,
 		0,
 		0,
 		width,
