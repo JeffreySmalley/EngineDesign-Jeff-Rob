@@ -16,7 +16,6 @@ int Engine::Shutdown()
 {
 	message = graphics->Shutdown();
 	delete graphics;
-	graphics = 0;
 	return message;
 }
 void Engine::Run()

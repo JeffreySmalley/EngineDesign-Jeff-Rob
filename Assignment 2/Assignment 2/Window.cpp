@@ -48,20 +48,43 @@ bool Window::closeCheck()
 	return msg.message ==WM_QUIT;
 }
 
-LRESULT CALLBACK Window::proc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+LRESULT APIENTRY Window::proc(HWND hWndMain, UINT message, WPARAM wParam, LPARAM lParam)
 {
+	static POINTS ptsBegin;
 	switch (message)
 	{
 		case WM_DESTROY:
-		{
 			PostQuitMessage(0);
 			return 0;
-		} break;
+			//mouse capture
+		case WM_LBUTTONDOWN:
+			SetCapture(hWndMain);
+			bIsCapture = true;
+			ptsBegin = MAKEPOINTS(lParam);
+			return 0;
+		case WM_MOUSEMOVE:
+			if (wParam &MK_LBUTTON)
+			{
+			}
+			break;
+		case WM_LBUTTONUP:
+			ReleaseCapture();
+			bIsCapture = false;
+			break;
+		case WM_ACTIVATEAPP:
+			if (wParam = TRUE)
+			{
+				if(bIsCapture)
+					SetCapture(hWndMain);
+
+			}break;
 	}
-	return DefWindowProc(hWnd, message, wParam, lParam);
+	return DefWindowProc(hWndMain, message, wParam, lParam);
 }
 
 int Window::getMsgPrm()
 {
 	return msg.wParam;
 }
+
+bool Window::bIsCapture = false;

@@ -1,5 +1,5 @@
 #include "Graphics.h"
-
+#include "Control.h"
 class Engine
 {
 private:

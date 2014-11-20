@@ -7,7 +7,8 @@ private:
 	HWND hwnd; //hwindow information
 	WNDCLASSEX wc; //window class information
 	MSG msg; //message
-	static LRESULT CALLBACK proc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam); //the process that reads messages
+	static bool bIsCapture;
+	static LRESULT APIENTRY proc(HWND hwndMain, UINT message, WPARAM wparam, LPARAM lparam); //the process that reads messages
 public:
 	Window(); //constructor
 	bool create(char* windowName, char* windowTitle, int posX, int posY, int width, int height); //called to create the window
