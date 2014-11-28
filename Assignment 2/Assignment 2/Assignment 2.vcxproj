@@ -78,15 +78,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseUI.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GUIStateManager.cpp" />
+    <ClCompile Include="GUISystem.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="Controls.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseUI.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="Event.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GUIStateManager.h" />
+    <ClInclude Include="GUISystem.h" />
+    <ClInclude Include="IGUIElement.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Controls.h" />
   </ItemGroup>
