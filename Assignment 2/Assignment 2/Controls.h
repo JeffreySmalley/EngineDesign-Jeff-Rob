@@ -28,3 +28,27 @@ public:
 	int getgamepadCount();
 	void Update();
 };
+
+
+class Keyboard
+{
+private:
+public:
+	Keyboard();
+};
+
+class Mouse
+{
+public:
+	struct Point
+	{
+		int x;
+		int y;
+	};
+
+private:
+	Point point;
+public:
+	
+	void getPoint(Point &mousePos){ mousePos = point;}
+};

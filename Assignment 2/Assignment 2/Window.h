@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include <windowsx.h>
+#include "Controls.h"
 
 class Window
 {

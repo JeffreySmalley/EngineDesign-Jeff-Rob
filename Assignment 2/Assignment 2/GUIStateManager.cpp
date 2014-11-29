@@ -18,5 +18,3 @@ void GUIStateManager::SetState(states s)
 		break;
 	}
 }
-
-void GUIStateManager::GetState()
