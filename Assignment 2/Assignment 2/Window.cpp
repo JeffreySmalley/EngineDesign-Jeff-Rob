@@ -53,31 +53,283 @@ LRESULT APIENTRY Window::proc(HWND hWndMain, UINT message, WPARAM wParam, LPARAM
 	static POINTS ptsBegin;
 	switch (message)
 	{
-		case WM_DESTROY:
-			PostQuitMessage(0);
-			return 0;
-			//mouse capture
-		case WM_LBUTTONDOWN:
-			SetCapture(hWndMain);
-			bIsCapture = true;
-			ptsBegin = MAKEPOINTS(lParam);
-			return 0;
-		case WM_MOUSEMOVE:
-			if (wParam &MK_LBUTTON)
-			{
-			}
-			break;
-		case WM_LBUTTONUP:
-			ReleaseCapture();
-			bIsCapture = false;
-			break;
-		case WM_ACTIVATEAPP:
-			if (wParam = TRUE)
-			{
-				if(bIsCapture)
-					SetCapture(hWndMain);
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		return 0;
 
-			}break;
+	//keyboard
+	case WM_KEYDOWN:
+		switch(wParam)
+		{
+		case VK_LEFT:
+			break;
+		case VK_RIGHT:
+			break;
+		case VK_UP:
+			break;
+		case VK_DOWN:
+			break;
+
+		//number keys 0-9
+		case  0x30:
+			//0
+			break;
+		case  0x31:
+			//1
+			break;
+		case  0x32:
+			//2
+			break;
+		case  0x33:
+			//3
+			break;
+		case  0x34:
+			//4
+			break;
+		case  0x35:
+			//5
+			break;
+		case  0x36:
+			//6
+			break;
+		case  0x37:
+			//7
+			break;
+		case  0x38:
+			//8
+			break;
+		case  0x39:
+			//9
+			break;
+		//letters a-z
+		case 0x41:
+			//a
+			break;
+		case 0x42:
+			//b
+			break;
+		case 0x43:
+			//c
+			break;
+		case 0x44:
+			//d
+			break;
+		case 0x45:
+			//e
+			break;
+		case 0x46:
+			//f
+			break;
+		case 0x47:
+			//g
+			break;
+		case 0x48:
+			//h
+			break;
+		case 0x49:
+			//i
+			break;
+		case 0x4A:
+			//j
+			break;
+		case 0x4B:
+			//k
+			break;
+		case 0x4C:
+			//l
+			break;
+		case 0x4D:
+			//m
+			break;
+		case 0x4E:
+			//n
+			break;
+		case 0x4F:
+			//o
+			break;
+		case 0x50:
+			//p
+			break;
+		case 0x51:
+			//q
+			break;
+		case 0x52:
+			//r
+			break;
+		case 0x53:
+			//s
+			break;
+		case 0x54:
+			//t
+			break;
+		case 0x55:
+			//u
+			break;
+		case 0x56:
+			//v
+			break;
+		case 0x57:
+			//w
+			break;
+		case 0x58:
+			//x
+			break;
+		case 0x59:
+			//y
+			break;
+		case 0x5A:
+			//z
+			break;
+		}
+		break;
+			case WM_KEYUP:
+		switch(wParam)
+		{
+		case VK_LEFT:
+			break;
+		case VK_RIGHT:
+			break;
+		case VK_UP:
+			break;
+		case VK_DOWN:
+			break;
+
+		//number keys 0-9
+		case  0x30:
+			//0
+			break;
+		case  0x31:
+			//1
+			break;
+		case  0x32:
+			//2
+			break;
+		case  0x33:
+			//3
+			break;
+		case  0x34:
+			//4
+			break;
+		case  0x35:
+			//5
+			break;
+		case  0x36:
+			//6
+			break;
+		case  0x37:
+			//7
+			break;
+		case  0x38:
+			//8
+			break;
+		case  0x39:
+			//9
+			break;
+
+		//letters a-z
+		case 0x41:
+			//a
+			break;
+		case 0x42:
+			//b
+			break;
+		case 0x43:
+			//c
+			break;
+		case 0x44:
+			//d
+			break;
+		case 0x45:
+			//e
+			break;
+		case 0x46:
+			//f
+			break;
+		case 0x47:
+			//g
+			break;
+		case 0x48:
+			//h
+			break;
+		case 0x49:
+			//i
+			break;
+		case 0x4A:
+			//j
+			break;
+		case 0x4B:
+			//k
+			break;
+		case 0x4C:
+			//l
+			break;
+		case 0x4D:
+			//m
+			break;
+		case 0x4E:
+			//n
+			break;
+		case 0x4F:
+			//o
+			break;
+		case 0x50:
+			//p
+			break;
+		case 0x51:
+			//q
+			break;
+		case 0x52:
+			//r
+			break;
+		case 0x53:
+			//s
+			break;
+		case 0x54:
+			//t
+			break;
+		case 0x55:
+			//u
+			break;
+		case 0x56:
+			//v
+			break;
+		case 0x57:
+			//w
+			break;
+		case 0x58:
+			//x
+			break;
+		case 0x59:
+			//y
+			break;
+		case 0x5A:
+			//z
+			break;
+		}
+		break;
+
+	//mouse
+	case WM_LBUTTONDOWN:
+		SetCapture(hWndMain);
+		bIsCapture = true;
+		ptsBegin = MAKEPOINTS(lParam);
+		return 0;
+	case WM_MOUSEMOVE:
+		if (wParam &MK_LBUTTON)
+		{
+		}
+		break;
+	case WM_LBUTTONUP:
+		ReleaseCapture();
+		bIsCapture = false;
+		break;
+	case WM_ACTIVATEAPP:
+		if (wParam = TRUE)
+		{
+			if(bIsCapture)
+				SetCapture(hWndMain);
+
+		}break;
 	}
 	return DefWindowProc(hWndMain, message, wParam, lParam);
 }
