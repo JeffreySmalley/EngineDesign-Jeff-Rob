@@ -6,3 +6,15 @@ BaseUI::BaseUI()
 	width = 100;
 	height = 100;
 }
+void BaseUI::Init()
+{
+}
+void BaseUI::Update(float dt)
+{
+}
+void BaseUI::Shutdown()
+{
+}
+void BaseUI::Render()
+{
+}

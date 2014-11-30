@@ -1,4 +1,5 @@
 #include "IEventData.h"
+#include "BaseEventData.h"
 #include <memory.h>
 #include <iostream>
 
@@ -7,20 +8,21 @@ class IEventManager
 {
 protected:
 	enum EventType{PLACEHOLDER_EVENT_1,PLACEHOLDER_EVENT_2,PLACEHOLDER_EVENT_3,PLACEHOLDER_EVENT_4};
+	EventType eventType;
 	typedef shared_ptr<IEventData> IEventDataPtr;
-	void Delegate(IEventDataPtr pEventData);
+	//void Delegate(IEventDataPtr pEventData);
 	typedef fastdelegate::FastDelegate1<IEventDataPtr> EventListenerDelegate;
 public:
 	//enum eConstants {}
 
-	explicit IEventManager(const char* pName, bool setAsGlobal);
-	virtual ~IEventManager();
+	explicit IEventManager(const char* pName, bool setAsGlobal){}
+	virtual ~IEventManager(){}
 
 	virtual bool VAddListener(const EventListenerDelegate& eventDelegate, const EventType& type) = 0;
 	virtual bool VRemoveListener(const EventListenerDelegate& eventDelegate, const EventType& type) = 0;
 	virtual bool VTriggerEvent(const IEventDataPtr) const = 0;
 	virtual bool VTickUpdate(unsigned long maxMillisec) = 0;
-	static IEventManager* Get();
+	static IEventManager* Get(){}
 
-	const unsigned int EVENTMANAGER_NUM_QUEUES = 2;
+	//const unsigned int EVENTMANAGER_NUM_QUEUES = 2;
 };
