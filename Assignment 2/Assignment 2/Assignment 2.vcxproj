@@ -85,6 +85,7 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="GUIStateManager.cpp" />
     <ClCompile Include="GUISystem.cpp" />
+    <ClCompile Include="IEventManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="Controls.cpp" />

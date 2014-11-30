@@ -1,3 +1,4 @@
+/*
 #include "GUISystem.h"
 
 GUISystem::GUISystem()
@@ -21,3 +22,4 @@ void GUISystem::RemoveElement(IGUIElement e)
 {
 	elements.remove(e);
 }
+*/
