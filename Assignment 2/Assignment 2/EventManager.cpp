@@ -46,7 +46,6 @@ bool EventManager::VRemoveListener(const EventListenerDelegate& eventDelegate, c
 bool EventManager::VTriggerEvent(const IEventDataPtr& pEvent)
 {
 	bool processed = false;
-
 	auto findIt = m_EventListeners.find(pEvent->VGetEventType());
 	if (findIt!= m_EventListeners.end())
 	{

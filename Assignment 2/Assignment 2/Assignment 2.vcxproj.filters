@@ -89,5 +89,8 @@
     <ClInclude Include="IEventManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EventType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

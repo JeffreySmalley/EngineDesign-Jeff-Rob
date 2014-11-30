@@ -3,12 +3,14 @@
 #include "Controls.h"
 
 
+
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
 class Window
 {
 private:
+	Gamepads gamepad;
 	HWND hwnd; //hwindow information
 	WNDCLASSEX wc; //window class information
 	MSG msg; //message

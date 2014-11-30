@@ -96,6 +96,7 @@
     <ClInclude Include="ButtonPressedEvent.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="EventManager.h" />
+    <ClInclude Include="EventType.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="GUIStateManager.h" />
     <ClInclude Include="GUISystem.h" />

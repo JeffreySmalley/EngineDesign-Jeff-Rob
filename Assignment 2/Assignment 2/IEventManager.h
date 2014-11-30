@@ -6,7 +6,6 @@ using namespace std;
 class IEventManager
 {
 protected:
-	enum EventType{PLACEHOLDER_EVENT_1,PLACEHOLDER_EVENT_2,PLACEHOLDER_EVENT_3,PLACEHOLDER_EVENT_4};
 	EventType eventType;
 	typedef shared_ptr<IEventData> IEventDataPtr;
 	//void Delegate(IEventDataPtr pEventData);

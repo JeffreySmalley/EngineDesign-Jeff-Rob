@@ -6,7 +6,7 @@
 
 #pragma comment(lib, "Xinput.lib")
 
-#define XUSER_MAX_COUNT 1
+#define XUSER_MAX_COUNT 4
 #define XINPUT_MAX_TRIGGER_DISTANCE 255
 #define XINPUT_FLOAT_MAX 32767
 #define XINPUT_DEADZONE 7849
