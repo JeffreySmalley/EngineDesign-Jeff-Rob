@@ -1,5 +1,4 @@
 #include "IEventData.h"
-#include "BaseEventData.h"
 #include <memory.h>
 #include <iostream>
 
@@ -13,7 +12,7 @@ protected:
 	//void Delegate(IEventDataPtr pEventData);
 	typedef fastdelegate::FastDelegate1<IEventDataPtr> EventListenerDelegate;
 public:
-	//enum eConstants {}
+	enum eConstants {kINFINITE = 0xffffffff};
 
 	explicit IEventManager(const char* pName, bool setAsGlobal){}
 	virtual ~IEventManager(){}
