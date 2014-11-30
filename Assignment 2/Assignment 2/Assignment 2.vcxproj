@@ -79,7 +79,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BaseUI.cpp" />
+    <ClCompile Include="ButtonPressedEvent.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="GUIStateManager.cpp" />
     <ClCompile Include="GUISystem.cpp" />
@@ -88,12 +90,17 @@
     <ClCompile Include="Controls.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseEventData.h" />
     <ClInclude Include="BaseUI.h" />
+    <ClInclude Include="ButtonPressedEvent.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="EventManager.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="GUIStateManager.h" />
     <ClInclude Include="GUISystem.h" />
+    <ClInclude Include="IEventData.h" />
+    <ClInclude Include="IEventManager.h" />
     <ClInclude Include="IGUIElement.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Controls.h" />
