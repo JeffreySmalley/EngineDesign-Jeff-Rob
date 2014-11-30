@@ -6,12 +6,12 @@ EventManager::EventManager(char const * const pName, bool setAsGlobal) : IEventM
 }
 bool EventManager::VAddListener(const EventListenerDelegate& eventDelegate, const EventType& type)
 {
-	EventListenerList& eventListenerList = m_eventListeners[type];
-	for (auto it = eventListenerList.begin(); it != eventListenerList.end(); ++i)
+	EventListenerList& eventListenerList = m_EventListeners[type];
+	for (auto it = eventListenerList.begin(); it != eventListenerList.end(); ++it)
 	{
 		if (eventDelegate == (*it))
 		{
-			GCC_WARNING("Attempting to double-register a delegate");
+			//GCC_WARNING("Attempting to double-register a delegate");
 			return false;
 		}
 	}

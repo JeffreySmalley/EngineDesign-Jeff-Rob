@@ -1,9 +1,15 @@
-#include <memory.h>
 #include "IEventData.h"
+#include <memory.h>
+#include <iostream>
+
+using namespace std;
 class IEventManager
 {
-private:
-	//typedef shared_ptr<IEventData>
+protected:
+	enum EventType{PLACEHOLDER_EVENT_1,PLACEHOLDER_EVENT_2,PLACEHOLDER_EVENT_3,PLACEHOLDER_EVENT_4};
+	typedef shared_ptr<IEventData> IEventDataPtr;
+	void Delegate(IEventDataPtr pEventData);
+	typedef fastdelegate::FastDelegate1<IEventDataPtr> EventListenerDelegate;
 public:
 	//enum eConstants {}
 

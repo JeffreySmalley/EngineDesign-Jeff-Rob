@@ -1,5 +1,4 @@
 #include "IEventManager.h"
-#include "IEventData.h"
 #include "BaseEventData.h"
 #include "FastDelegate.h"
 #include <list>
@@ -7,11 +6,6 @@
 class EventManager : public IEventManager
 {
 private:
-	
-	typedef std::shared_ptr<IEventData> IEventDataPtr;
-	void Delegate(IEventDataPtr pEventData);
-	typedef fastdelegate::FastDelegate1<IEventDataPtr> EventListenerDelegate;
-	
 	typedef std::list<EventListenerDelegate> EventListenerList;
 	typedef std::map<EventType, EventListenerList> EventListenerMap;
 	typedef std::list<IEventDataPtr> EventQueue;

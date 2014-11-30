@@ -1,3 +1,4 @@
+/*
 #include "GUIStateManager.h"
 
 void GUIStateManager::SetState(states s)
@@ -18,3 +19,4 @@ void GUIStateManager::SetState(states s)
 		break;
 	}
 }
+*/
