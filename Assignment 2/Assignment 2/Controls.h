@@ -1,6 +1,8 @@
 #include <xinput.h>
 #include <dinput.h>
 #include <math.h>
+#include <atltypes.h>
+#include <string>
 
 #pragma comment(lib, "Xinput9_1_0.lib")
 
@@ -30,25 +32,32 @@ public:
 };
 
 
-class Keyboard
+class IEKeyBoardHandler
 {
-private:
-public:
-	Keyboard();
+	virtual bool VOnKeyDown(unsigned int const kcode)=0;
+	virtual bool VOnKeyUp(unsigned int const kcode)=0;
 };
 
-class Mouse
+class IPointerHandler
 {
 public:
-	struct Point
-	{
-		int x;
-		int y;
-	};
+	virtual bool VOnPointerMove(const CPoint &mousePos)=0;
+	virtual bool VOnPointerButtonDown(const CPoint &mousePos, const std::string &buttonName)=0;
+	virtual bool VOnPointerButtonUp(const CPoint &mousePos, const std::string &buttonName)=0;
+	virtual int VGetPointerRadius()=0;
+};
 
-private:
-	Point point;
-public:
-	
-	void getPoint(Point &mousePos){ mousePos = point;}
+class IJoystickHandler
+{
+	virtual bool VOnButtonDown(const std::string &buttonName, int const pressure)=0;
+	virtual bool VOnButtonUp(const std::string &buttonName)=0;
+	virtual bool VOnJoyStrick(float const x, float const y)=0;
+};
+
+class IGamepadHandler
+{
+	virtual bool VOnTrigger(const std::string &triggerName, float const pressure)=0;
+	virtual bool VOnButtonDown(const std::string &buttonName, int const pressure)=0;
+	virtual bool VOnButtonUp(const std::string &buttonName, int const pressure)=0;
+	virtual bool VOnDirectionalPad(const std::string &stickName, float const x, float const y)=0;
 };
