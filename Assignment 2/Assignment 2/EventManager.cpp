@@ -47,7 +47,7 @@ bool EventManager::VTriggerEvent(const IEventDataPtr& pEvent)
 {
 	bool processed = false;
 
-	auto findIt = m_EventListeners.find(pEvent->VGetEventType);
+	auto findIt = m_EventListeners.find(pEvent->VGetEventType());
 	if (findIt!= m_EventListeners.end())
 	{
 		const EventListenerList& eventListenerList = findIt->second;
@@ -62,7 +62,7 @@ bool EventManager::VTriggerEvent(const IEventDataPtr& pEvent)
 }
 bool EventManager::VQueueEvent(const IEventDataPtr& pEvent)
 {
-	auto findIt = m_EventListeners.find(pEvent->VGetEventType);
+	auto findIt = m_EventListeners.find(pEvent->VGetEventType());
 	if (findIt != m_EventListeners.end())
 	{
 		m_queues[m_activeQueue].push_back(pEvent);
@@ -102,7 +102,7 @@ bool EventManager::VAbortEvent(const EventType& type, bool allOfType)
 bool EventManager::VTickUpdate(unsigned long maxMs)
 {
 	unsigned long currentMs = GetTickCount();
-	unsigned long maxMs = ((maxMs == IEventManager::kINFINITE) ? (IEventManager::kINFINITE) : (currentMs + maxMs));
+	unsigned long maxMS = ((maxMs == IEventManager::kINFINITE) ? (IEventManager::kINFINITE) : (currentMs + maxMs));
 
 	// Swap active queues and clear the new queue after the swap
 	int queueToProcess = m_activeQueue;
@@ -116,7 +116,7 @@ bool EventManager::VTickUpdate(unsigned long maxMs)
 		IEventDataPtr pEvent = m_queues[queueToProcess].front();
 		m_queues[queueToProcess].pop_front();
 
-		const EventType& eventType = pEvent->VGetEventType;
+		const EventType& eventType = pEvent->VGetEventType();
 
 		// Find all the delegate functions registered for this event
 		auto findIt = m_EventListeners.find(eventType);

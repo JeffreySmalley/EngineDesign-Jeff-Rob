@@ -62,9 +62,6 @@
     <ClInclude Include="Controls.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Event.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GUISystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>

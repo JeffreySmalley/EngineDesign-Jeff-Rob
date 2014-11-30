@@ -1,4 +1,3 @@
-/*
 #include "Controls.h"
 
 Gamepads::Gamepads()
@@ -78,7 +77,15 @@ void Gamepads::Update()
 				normalizedLMagnitude = 0;
 			}
 			AButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_A)!=0);
+			BButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_B)!=0);
+			XButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_X)!=0);
+			YButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_Y)!=0);
+			RButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_SHOULDER)!=0);
+			LButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_SHOULDER)!=0);
+			RSButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_RIGHT_THUMB)!=0);
+			LSButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_LEFT_THUMB)!=0);
+			StartButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_START)!=0);
+			BackButton=((gamepadState.Gamepad.wButtons & XINPUT_GAMEPAD_BACK)!=0);
 		}
 	}
 }
-*/

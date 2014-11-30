@@ -12,10 +12,12 @@ public:
 	{
 		return sk_EventType;
 	}
-	virtual IEventDataPtr VCopy() const
+	/*
+	virtual IEventManager::IEventDataPtr VCopy() const
 	{
-		return IEventDataPtr(GCC_NEW ButtonPressedEvent());/*(m_id)*/
+		return IEventDataPtr(GCC_NEW ButtonPressedEvent());(m_id)
 	}
+	*/
 	virtual void VSerialize(std::ostringstream &out) const
 	{
 		//out << m_id;
