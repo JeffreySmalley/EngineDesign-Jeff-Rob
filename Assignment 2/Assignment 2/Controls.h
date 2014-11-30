@@ -1,16 +1,17 @@
+#include <windows.h>
 #include <xinput.h>
-#include <dinput.h>
 #include <math.h>
 #include <atltypes.h>
 #include <string>
 
-#pragma comment(lib, "Xinput9_1_0.lib")
+#pragma comment(lib, "Xinput.lib")
 
 #define XUSER_MAX_COUNT 1
 #define XINPUT_MAX_TRIGGER_DISTANCE 255
 #define XINPUT_FLOAT_MAX 32767
 #define XINPUT_DEADZONE 7849
 #define XINPUT_TRIGGER_THRESHOLD 15
+
 
 class Gamepads
 {
@@ -30,7 +31,6 @@ public:
 	int getgamepadCount();
 	void Update();
 };
-
 
 class IEKeyBoardHandler
 {

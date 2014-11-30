@@ -20,9 +20,9 @@ bool Gamepads::isConnected(DWORD index)
 
 int Gamepads::getgamepadCount()
 {
-	DWORD pads;
+	DWORD pads = 0;
 
-	for (DWORD i; i < XUSER_MAX_COUNT; i++)
+	for (DWORD i = 0; i < XUSER_MAX_COUNT; i++)
 	{
 		if (isConnected(i))
 			pads++;
@@ -30,6 +30,8 @@ int Gamepads::getgamepadCount()
 
 	return pads;
 }
+
+
 
 void Gamepads::Update()
 {
