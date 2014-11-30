@@ -2,6 +2,10 @@
 #include <windowsx.h>
 #include "Controls.h"
 
+
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
+
 class Window
 {
 private:

@@ -50,6 +50,9 @@ bool Window::closeCheck()
 
 LRESULT APIENTRY Window::proc(HWND hWndMain, UINT message, WPARAM wParam, LPARAM lParam)
 {
+	RECT rc;
+	GetClientRect(hWndMain, &rc);
+	MapWindowPoints(hWndMain, GetParent(hWndMain),(LPPOINT)&rc,2);
 	static POINTS ptsBegin;
 	switch (message)
 	{
@@ -69,6 +72,15 @@ LRESULT APIENTRY Window::proc(HWND hWndMain, UINT message, WPARAM wParam, LPARAM
 			break;
 		case VK_DOWN:
 			break;
+		case VK_CONTROL:
+			break;
+		case VK_SHIFT:
+			break;
+		case VK_BACK:
+			break;
+		case VK_RETURN:
+			break;
+
 
 		//number keys 0-9
 		case  0x30:
@@ -182,7 +194,7 @@ LRESULT APIENTRY Window::proc(HWND hWndMain, UINT message, WPARAM wParam, LPARAM
 			break;
 		}
 		break;
-			case WM_KEYUP:
+	case WM_KEYUP:
 		switch(wParam)
 		{
 		case VK_LEFT:
@@ -193,8 +205,61 @@ LRESULT APIENTRY Window::proc(HWND hWndMain, UINT message, WPARAM wParam, LPARAM
 			break;
 		case VK_DOWN:
 			break;
+		case VK_TAB:
+			break;
+		case VK_BACK:
+			break;
+		case VK_MENU:
+			break;
+		case VK_PAUSE:
+			break;
+		case VK_ESCAPE:
+			break;
+		case VK_SPACE:
+			break;
+		case VK_PRINT:
+			break;
+		case VK_PRIOR:
+			break;
+		case VK_NEXT:
+			break;
+		case VK_END:
+			break;
+		case VK_HOME:
+			break;
+		case VK_INSERT:
+			break;
+		case VK_DELETE:
+			break;
+		case VK_F1:
+			break;
+		case VK_F2:
+			break;
+		case VK_F3:
+			break;
+		case VK_F4:
+			break;
+		case VK_F5:
+			break;
+		case VK_F6:
+			break;
+		case VK_F7:
+			break;
+		case VK_F8:
+			break;
+		case VK_F9:
+			break;
+		case VK_F10:
+			break;
+		case VK_F11:
+			break;
+		case VK_F12:
+			break;
 
-		//number keys 0-9
+		//number keys ~-9
+		case 0xC0:
+			//~
+			break;
 		case  0x30:
 			//0
 			break;
@@ -314,12 +379,28 @@ LRESULT APIENTRY Window::proc(HWND hWndMain, UINT message, WPARAM wParam, LPARAM
 		bIsCapture = true;
 		ptsBegin = MAKEPOINTS(lParam);
 		return 0;
+	case WM_RBUTTONDOWN:
+		SetCapture(hWndMain);
+		bIsCapture = true;
+		ptsBegin = MAKEPOINTS(lParam);
+		return 0;
 	case WM_MOUSEMOVE:
+		POINT pos;
+		GetCursorPos(&pos);
+		SetCursorPos(rc.right/2,rc.bottom/2);
+
 		if (wParam &MK_LBUTTON)
+		{
+		}
+		if (wParam &MK_RBUTTON)
 		{
 		}
 		break;
 	case WM_LBUTTONUP:
+		ReleaseCapture();
+		bIsCapture = false;
+		break;
+	case WM_RBUTTONUP:
 		ReleaseCapture();
 		bIsCapture = false;
 		break;
