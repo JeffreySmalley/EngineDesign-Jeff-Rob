@@ -1,3 +1,4 @@
+/*
 #include <xinput.h>
 #include <dinput.h>
 #include <math.h>
@@ -52,3 +53,4 @@ public:
 	
 	void getPoint(Point &mousePos){ mousePos = point;}
 };
+*/

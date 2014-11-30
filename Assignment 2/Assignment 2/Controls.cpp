@@ -1,3 +1,4 @@
+/*
 #include "Controls.h"
 
 Gamepads::Gamepads()
@@ -78,3 +79,4 @@ void Gamepads::Update()
 		}
 	}
 }
+*/
