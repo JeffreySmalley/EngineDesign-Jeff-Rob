@@ -12,7 +12,7 @@ void Graphics::Initialize()
 bool Graphics::createWindow()
 {
 	window = new Window();
-	if (!window->create("Assignment1","Assignment 1", 0,0,SCREEN_WIDTH,SCREEN_HEIGHT))
+	if (!window->create("FinalAssignment","Final Assignment", 0,0,SCREEN_WIDTH,SCREEN_HEIGHT))
 		return false;
 
 	return true;
