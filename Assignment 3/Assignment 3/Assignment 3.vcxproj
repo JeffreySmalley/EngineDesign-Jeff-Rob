@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CBE04C20-B747-4CA9-82EC-B284182EAC41}</ProjectGuid>
+    <ProjectGuid>{0F0933C8-AF90-442F-AED8-3FA06C370240}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Assignment3</RootNamespace>
   </PropertyGroup>
@@ -78,34 +78,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\BaseUI.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\ButtonPressedEvent.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Controls.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Engine.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\EventManager.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Graphics.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\GUIStateManager.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\GUISystem.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\IEventManager.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Main.cpp" />
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Window.cpp" />
+    <ClCompile Include="BaseUI.cpp" />
+    <ClCompile Include="ButtonPressedEvent.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GUIStateManager.cpp" />
+    <ClCompile Include="GUISystem.cpp" />
+    <ClCompile Include="IEventManager.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Controls.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\BaseEventData.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\BaseUI.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\ButtonPressedEvent.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\Controls.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\Engine.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\EventManager.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\EventType.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\FastDelegate.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\Graphics.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\GUIStateManager.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\GUISystem.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\IEventData.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\IEventManager.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\IGUIElement.h" />
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\Window.h" />
+    <ClInclude Include="BaseEventData.h" />
+    <ClInclude Include="BaseUI.h" />
+    <ClInclude Include="ButtonPressedEvent.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="EventType.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GUIStateManager.h" />
+    <ClInclude Include="GUISystem.h" />
+    <ClInclude Include="IEventData.h" />
+    <ClInclude Include="IEventManager.h" />
+    <ClInclude Include="IGUIElement.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="Controls.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,84 +15,81 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\BaseUI.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\ButtonPressedEvent.cpp">
+    <ClCompile Include="Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Controls.cpp">
+    <ClCompile Include="Graphics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Engine.cpp">
+    <ClCompile Include="Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\EventManager.cpp">
+    <ClCompile Include="Controls.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Graphics.cpp">
+    <ClCompile Include="BaseUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\GUIStateManager.cpp">
+    <ClCompile Include="GUIStateManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\GUISystem.cpp">
+    <ClCompile Include="GUISystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\IEventManager.cpp">
+    <ClCompile Include="EventManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Main.cpp">
+    <ClCompile Include="ButtonPressedEvent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Assignment 2\Assignment 2\Window.cpp">
+    <ClCompile Include="IEventManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\BaseEventData.h">
+    <ClInclude Include="Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\BaseUI.h">
+    <ClInclude Include="Graphics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\ButtonPressedEvent.h">
+    <ClInclude Include="Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\Controls.h">
+    <ClInclude Include="Controls.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\Engine.h">
+    <ClInclude Include="GUISystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\EventManager.h">
+    <ClInclude Include="GUIStateManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\EventType.h">
+    <ClInclude Include="IGUIElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\FastDelegate.h">
+    <ClInclude Include="BaseUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\Graphics.h">
+    <ClInclude Include="EventManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\GUIStateManager.h">
+    <ClInclude Include="IEventData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\GUISystem.h">
+    <ClInclude Include="BaseEventData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\IEventData.h">
+    <ClInclude Include="ButtonPressedEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\IEventManager.h">
+    <ClInclude Include="IEventManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\IGUIElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Assignment 2\Assignment 2\Window.h">
+    <ClInclude Include="EventType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
