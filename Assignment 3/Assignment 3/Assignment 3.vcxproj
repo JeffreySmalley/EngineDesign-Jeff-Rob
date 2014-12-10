@@ -51,7 +51,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
@@ -86,6 +86,8 @@
     <ClCompile Include="GUIStateManager.cpp" />
     <ClCompile Include="GUISystem.cpp" />
     <ClCompile Include="IEventManager.cpp" />
+    <ClCompile Include="InternalScriptExports.cpp" />
+    <ClCompile Include="LuaStateManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="Controls.cpp" />
@@ -103,6 +105,9 @@
     <ClInclude Include="IEventData.h" />
     <ClInclude Include="IEventManager.h" />
     <ClInclude Include="IGUIElement.h" />
+    <ClInclude Include="InternalScriptExports.h" />
+    <ClInclude Include="IScriptManager.h" />
+    <ClInclude Include="LuaStateManager.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Controls.h" />
   </ItemGroup>
