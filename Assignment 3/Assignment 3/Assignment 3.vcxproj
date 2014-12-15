@@ -78,6 +78,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AudioChannel.cpp" />
+    <ClCompile Include="AudioSystem.cpp" />
     <ClCompile Include="BaseUI.cpp" />
     <ClCompile Include="ButtonPressedEvent.cpp" />
     <ClCompile Include="Engine.cpp" />
@@ -93,6 +95,8 @@
     <ClCompile Include="Controls.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AudioChannel.h" />
+    <ClInclude Include="AudioSystem.h" />
     <ClInclude Include="BaseEventData.h" />
     <ClInclude Include="BaseUI.h" />
     <ClInclude Include="ButtonPressedEvent.h" />
