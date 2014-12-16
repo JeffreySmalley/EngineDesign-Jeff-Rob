@@ -1,4 +1,4 @@
-/*
+
 class GUIStateManager
 {
 private:
@@ -10,4 +10,3 @@ public:
 	void GetState();
 	void SetState(states s);
 };
-*/

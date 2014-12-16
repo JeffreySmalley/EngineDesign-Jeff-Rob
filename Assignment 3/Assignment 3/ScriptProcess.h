@@ -23,6 +23,9 @@ protected:
 	virtual void VOnFail();
 	virtual void VOnAbort();
 private:
+	const bool IsAlive;
+	const bool IsDead;
+	const bool IsPaused;
 	// private helpers
 	static void RegisterScriptClassFunctions();
 	//static LuaObject CreateFromScript(LuaObject self,LuaObject constructionData,LuaObject originalSubClass);

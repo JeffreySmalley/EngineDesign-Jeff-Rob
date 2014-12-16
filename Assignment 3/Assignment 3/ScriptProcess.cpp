@@ -106,7 +106,16 @@ bool ScriptProcess::VBuildCppDataFromScript(LuaObject scriptClass, LuaObject con
 	{
 		for (LuaTableIterator constructionDataIt(constructionData); constructionDataIt; constructionDataIt.Next())
 		{
-
+			const char* key = constructionDataIt.GetKey().GetString();
+			LuaObject val = constructionDataIt.GetValue();
+			if (strcmp(key, "frequency") == 0 && val.IsInteger())
+			{
+				m_frequency = val.GetInteger();
+			}
+			else
+			{
+				m_self.SetObject(key, val);
+			}
 		}
 	}
 	return true;

@@ -1,4 +1,3 @@
-/*
 #include "Controls.h"
 #include "GUIStateManager.h"
 #include "IGUIElement.h"
@@ -24,4 +23,3 @@ public:
 	void AddElement(IGUIElement e);
 	void RemoveElement(IGUIElement e);
 };
-*/

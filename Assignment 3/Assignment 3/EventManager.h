@@ -2,6 +2,7 @@
 #include "IEventManager.h"
 #include <list>
 #include <map>
+#define EVENTMANAGER_NUM_QUEUES 4
 class EventManager : public IEventManager
 {
 private:
@@ -10,8 +11,7 @@ private:
 	typedef std::list<IEventDataPtr> EventQueue;
 
 	EventListenerMap m_EventListeners;
-	//EventQueue m_queues[EVENTMANAGER_NUM_QUEUES];
-	EventQueue m_queues[2];
+	EventQueue m_queues[EVENTMANAGER_NUM_QUEUES];
 	int m_activeQueue;
 public:
 	explicit EventManager(const char* pName, bool setAsGlobal);

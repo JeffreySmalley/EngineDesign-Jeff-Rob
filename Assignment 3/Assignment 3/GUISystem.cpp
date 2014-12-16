@@ -1,18 +1,19 @@
-/*
+
 #include "GUISystem.h"
 
 GUISystem::GUISystem()
 {
 	
 }
-//GUISystem::Initialize()
-//{
-
-//}
+bool GUISystem::Initialize()
+{
+	return true;
+}
 int GUISystem::Shutdown()
 {
 	delete stateManager;
 	//delete elements;
+	return true;
 }
 void GUISystem::AddElement(IGUIElement e)
 {
@@ -20,6 +21,5 @@ void GUISystem::AddElement(IGUIElement e)
 }
 void GUISystem::RemoveElement(IGUIElement e)
 {
-	elements.remove(e);
+	//elements.remove(e);
 }
-*/
