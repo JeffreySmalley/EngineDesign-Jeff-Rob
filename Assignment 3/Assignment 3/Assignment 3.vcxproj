@@ -43,6 +43,8 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -61,8 +63,12 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>luaplus51-1201.lib;%(AdditionalDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>luaplus51-1201.lib;fmod_vc.lib;%(AdditionalDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /y “C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\lib\fmodL.dll” “$(OutputPath)”
+copy /y “C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\lib\fmod.dll” “$(OutputPath)”</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -84,6 +90,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AudioChannel.cpp" />
+    <ClCompile Include="AudioSystem.cpp" />
     <ClCompile Include="BaseUI.cpp" />
     <ClCompile Include="ButtonPressedEvent.cpp" />
     <ClCompile Include="Engine.cpp" />
@@ -100,6 +108,8 @@
     <ClCompile Include="Controls.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AudioChannel.h" />
+    <ClInclude Include="AudioSystem.h" />
     <ClInclude Include="BaseEventData.h" />
     <ClInclude Include="BaseUI.h" />
     <ClInclude Include="ButtonPressedEvent.h" />
