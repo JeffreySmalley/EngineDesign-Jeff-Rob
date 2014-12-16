@@ -2,7 +2,12 @@
 
 void AudioSystem::Initilize()
 {
-	
+	result = FMOD::System_Create(&system);
+	FMODErrorCheck(result);
+
+	result = system->init(512,FMOD_INIT_NORMAL,0);
+
+	FMODErrorCheck(result);
 }
 
 void AudioSystem::update(float dt)
@@ -14,6 +19,8 @@ void AudioSystem::Shutdown()
 	{
 		delete ActiveChannels[i];
 	}
+
+	delete system;
 }
 void AudioSystem::StopSound(AudioChannel* Channel)
 {
@@ -66,4 +73,13 @@ void AudioSystem::MuteAll()
 	{
 		ActiveChannels[i]->Mute();
 	}
+}
+
+void AudioSystem::FMODErrorCheck(FMOD_RESULT result)
+{
+    if (result != FMOD_OK)
+    {
+        std::cout << "FMOD error! (" << result << ") " << FMOD_ErrorString(result) << std::endl;
+        exit(-1);
+    }
 }
