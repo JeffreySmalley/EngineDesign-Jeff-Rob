@@ -12,6 +12,7 @@ void AudioSystem::Initilize()
 
 void AudioSystem::update(float dt)
 {
+	system->update();
 }
 void AudioSystem::Shutdown()
 {

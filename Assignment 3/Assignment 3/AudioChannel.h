@@ -1,16 +1,16 @@
 #ifndef AUDIOCHANNEL_H
 #define AUDIOCHANNEL_H
-
 #include "AudioSystem.h"
 class AudioChannel
 {
 private:
+	FMOD::Channel* channel;
 	float Volume;
 	bool IsLooping;
 	bool IsPaused;
 	AudioType Type;
 public:
-	AudioChannel(/*resourse*/ AudioType Type);
+	AudioChannel(char* filePath, AudioType Type);
 	void SetVolume(float Volume);
 	void Mute();
 	bool IsComplete();

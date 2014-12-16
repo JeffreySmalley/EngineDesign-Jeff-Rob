@@ -9,10 +9,10 @@
 
 class AudioSystem
 {
-private:
-	static FMOD::System *system;
-	static FMOD_RESULT result;
 public:
+	static FMOD_RESULT result;
+	static FMOD::System *system;
+
 	static std::vector <AudioChannel*> ActiveChannels;
 
 	static void Initilize();
