@@ -1,20 +1,25 @@
-#include "LuaPlus\LuaPlus.h"
+#include <LuaPlus.h>
 #include "IScriptManager.h"
+#include <iostream>
 
 using namespace LuaPlus;
+using namespace std;
 
 class LuaStateManager : public IScriptManager
 {
+	static LuaStateManager* s_pSingleton;
+	LuaState* m_pLuaState;
+	string m_lastError;
 public:
 	static bool Create();
 	static bool Destroy();
-	//static LuaStateManager* Get(){GCC_ASSERT(s_pSingleton); return s_pSingleton;}
+	static LuaStateManager* Get(){assert(s_pSingleton); return s_pSingleton;}
 	
 	virtual bool VInit() override;
 	virtual void VExecuteFile(const char* resource) override;
 	virtual void VExecuteString(const char* str) override;
 
-	LuaObject GetGlobalVars();
+	//LuaObject GetGlobalVars(){};
 	LuaState* GetLuaState() const;
 
 	LuaObject CreatePath(const char* pathString, bool toIgnoreLastElement = false);

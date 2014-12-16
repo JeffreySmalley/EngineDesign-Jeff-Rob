@@ -41,9 +41,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -57,6 +61,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>luaplus51-1201.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -75,6 +80,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>luaplus51-1201.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -89,6 +95,7 @@
     <ClCompile Include="InternalScriptExports.cpp" />
     <ClCompile Include="LuaStateManager.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ScriptProcess.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="Controls.cpp" />
   </ItemGroup>
@@ -108,6 +115,7 @@
     <ClInclude Include="InternalScriptExports.h" />
     <ClInclude Include="IScriptManager.h" />
     <ClInclude Include="LuaStateManager.h" />
+    <ClInclude Include="ScriptProcess.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Controls.h" />
   </ItemGroup>
